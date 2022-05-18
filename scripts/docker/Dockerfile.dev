@@ -1,0 +1,16 @@
+FROM node:latest
+
+RUN mkdir -p /eventhi-api
+WORKDIR /eventhi-api
+
+COPY . /eventhi-api
+
+ENV NODE_ENV=development
+
+RUN npm i --silent && \
+    npm run build:docs && \
+    npm run build
+
+EXPOSE 5001
+
+CMD ["npm", "run", "start"]

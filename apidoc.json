@@ -1,0 +1,8 @@
+{
+  "name": "Typescript API",
+  "version": "1.0.0",
+  "description": "API service",
+  "template" : {
+    "withCompare" : false
+  }
+}
